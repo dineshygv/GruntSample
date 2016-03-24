@@ -2,6 +2,7 @@ module.exports = function (grunt)
 {
 	var jstSource = ['templates/**/*.html'];
 	
+	
 	grunt.initConfig(
 	{
 		jst :
