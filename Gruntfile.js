@@ -1,7 +1,7 @@
 module.exports = function (grunt)
 {
 	var jstSource = ['templates/**/*.html'];
-	
+	var path = require('path');
 	
 	grunt.initConfig(
 	{
@@ -12,6 +12,12 @@ module.exports = function (grunt)
 				files :
 				{
 					"compiled/templates.js" : jstSource
+				},
+				options:
+				{
+					processName: function(filepath) {
+						return path.basename(filepath, '.html');
+					}
 				}
 			}
 		},
